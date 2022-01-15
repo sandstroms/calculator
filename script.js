@@ -10,6 +10,16 @@ function add() {
   }
 }
 
+function subtract() {
+  let inputVal = getValue();
+  if(inputVal == '') {
+    setValue("Error");
+  } else {
+    addToStack(inputVal);
+    addToStack('-');
+  }
+}
+
 function equals() {
   let inputVal = getValue();
   addToStack(inputVal);
@@ -19,10 +29,18 @@ function equals() {
     let num2 = Number(stack.pop());
     switch(operator) {
       case '+':
-        setValue(num1 + num2);
+        setValue(num2 + num1);
+        break;
+      case '-':
+        setValue(num2 - num1);
+        break;
+      case '*':
+        setValue(num2 * num1);
+        break;
+      case '/':
+        setValue(num2 / num1);
         break;
     }
-
   }
 }
 
