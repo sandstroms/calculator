@@ -20,6 +20,26 @@ function subtract() {
   }
 }
 
+function multiply() {
+  let inputVal = getValue();
+  if(inputVal == '') {
+    setValue("Error");
+  } else {
+    addToStack(inputVal);
+    addToStack('*');
+  }
+}
+
+function divide() {
+  let inputVal = getValue();
+  if(inputVal == '') {
+    setValue("Error");
+  } else {
+    addToStack(inputVal);
+    addToStack('/');
+  }
+}
+
 function equals() {
   let inputVal = getValue();
   addToStack(inputVal);
