@@ -2,8 +2,12 @@ const stack = [];
 
 function add() {
   let inputVal = getValue();
-  addToStack(inputVal);
-  addToStack('+');
+  if(inputVal == '') {
+    setValue("Error");
+  } else {
+    addToStack(inputVal);
+    addToStack('+');
+  }
 }
 
 function equals() {
@@ -28,7 +32,9 @@ function setValue(val) {
 
 function getValue() {
   let inputVal = document.getElementById('inputNumber').value;
-  if(!Number.isNaN(inputVal)) {
+  if(isNaN(inputVal)) {
+    return '';
+  } else {
     return inputVal;
   }
 }
