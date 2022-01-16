@@ -39,7 +39,7 @@ function clickFour() {
 
 function clickFive() {
   if(clearField) {
-    setValue('4');
+    setValue('5');
     clearField = false;
   } else {
     appendValue('5');
@@ -47,23 +47,48 @@ function clickFive() {
 }
 
 function clickSix() {
-  appendValue('6');
+  if(clearField) {
+    setValue('6');
+    clearField = false;
+  } else {
+    appendValue('6');
+  }
 }
 
 function clickSeven() {
-  appendValue('7');
+  if(clearField) {
+    setValue('7');
+    clearField = false;
+  } else {
+    appendValue('7');
+  }
 }
 
 function clickEight() {
-  appendValue('8');
+  if(clearField) {
+    setValue('8');
+    clearField = false;
+  } else {
+    appendValue('8');
+  }
 }
 
 function clickNine() {
-  appendValue('9');
+  if(clearField) {
+    setValue('9');
+    clearField = false;
+  } else {
+    appendValue('9');
+  }
 }
 
 function clickZero() {
-  appendValue('0');
+  if(clearField) {
+    setValue('0');
+    clearField = false;
+  } else {
+    appendValue('0');
+  }
 }
 
 function add() {
