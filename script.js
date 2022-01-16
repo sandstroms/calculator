@@ -99,33 +99,24 @@ function add() {
 }
 
 function subtract() {
-  let inputVal = getValue();
-  if(inputVal == '') {
-    setValue("Error");
-  } else {
-    addToStack(inputVal);
-    addToStack('-');
-  }
+  let inputVal = getValue()
+  addToStack(inputVal);
+  addToStack('-');
+  clearField = true;
 }
 
 function multiply() {
   let inputVal = getValue();
-  if(inputVal == '') {
-    setValue("Error");
-  } else {
-    addToStack(inputVal);
-    addToStack('*');
-  }
+  addToStack(inputVal);
+  addToStack('*');
+  clearField = true;
 }
 
 function divide() {
   let inputVal = getValue();
-  if(inputVal == '') {
-    setValue("Error");
-  } else {
-    addToStack(inputVal);
-    addToStack('/');
-  }
+  addToStack(inputVal);
+  addToStack('/');
+  clearField = true;
 }
 
 function equals() {
