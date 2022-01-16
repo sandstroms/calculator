@@ -126,6 +126,7 @@ function equals() {
     let num1 = Number(stack.pop());
     let operator = stack.pop();
     let num2 = Number(stack.pop());
+    clearField = true;
     switch(operator) {
       case '+':
         setValue(num2 + num1);
