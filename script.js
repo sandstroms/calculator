@@ -1,5 +1,13 @@
 const stack = [];
 
+function clickOne() {
+  appendValue('1');
+}
+
+function clickTwo() {
+  appendValue('2');
+}
+
 function add() {
   let inputVal = getValue();
   if(inputVal == '') {
@@ -66,6 +74,11 @@ function equals() {
 
 function setValue(val) {
   document.getElementById('inputNumber').value = val;
+}
+
+function appendValue(val) {
+  let currVal = getValue();
+  document.getElementById('inputNumber').value = currVal + val;
 }
 
 function getValue() {
