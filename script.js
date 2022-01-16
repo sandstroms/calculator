@@ -1,21 +1,76 @@
 const stack = [];
+var clearField = false;
 
 function clickOne() {
-  appendValue('1');
+  if(clearField) {
+    setValue('1');
+    clearField = false;
+  } else {
+    appendValue('1');
+  }
 }
 
 function clickTwo() {
-  appendValue('2');
+  if(clearField) {
+    setValue('2');
+    clearField = false;
+  } else {
+    appendValue('2');
+  }
+}
+
+function clickThree() {
+  if(clearField) {
+    setValue('3');
+    clearField = false;
+  } else {
+    appendValue('3');
+  }
+}
+
+function clickFour() {
+  if(clearField) {
+    setValue('4');
+    clearField = false;
+  } else {
+    appendValue('4');
+  }
+}
+
+function clickFive() {
+  if(clearField) {
+    setValue('4');
+    clearField = false;
+  } else {
+    appendValue('5');
+  }
+}
+
+function clickSix() {
+  appendValue('6');
+}
+
+function clickSeven() {
+  appendValue('7');
+}
+
+function clickEight() {
+  appendValue('8');
+}
+
+function clickNine() {
+  appendValue('9');
+}
+
+function clickZero() {
+  appendValue('0');
 }
 
 function add() {
   let inputVal = getValue();
-  if(inputVal == '') {
-    setValue("Error");
-  } else {
-    addToStack(inputVal);
-    addToStack('+');
-  }
+  addToStack(inputVal);
+  addToStack('+');
+  clearField = true;
 }
 
 function subtract() {
@@ -83,11 +138,7 @@ function appendValue(val) {
 
 function getValue() {
   let inputVal = document.getElementById('inputNumber').value;
-  if(isNaN(inputVal)) {
-    return '';
-  } else {
-    return inputVal;
-  }
+  return inputVal;
 }
 
 function addToStack(item) {
