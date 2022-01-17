@@ -91,6 +91,14 @@ function clickZero() {
   }
 }
 
+function printStack() {
+  let text = "";
+  for(let i = 0; i < stack.length; i++) {
+    text += stack[i] + "<br>";
+  }
+  document.getElementById("print-stack-output").innerHTML = text;
+}
+
 function add() {
   let inputVal = getValue();
   addToStack(inputVal);
